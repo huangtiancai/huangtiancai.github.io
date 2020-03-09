@@ -1,0 +1,1260 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="使用服务器搭建Typecho博客, Hexo">
+    <meta name="description" content="关键词
+
+VPS（Virtual Private Server）
+
+服务器
+
+域名
+
+ip
+
+SSH
+
+宝塔
+
+Nginx
+
+PHP
+
+MySQl
+
+typecho博客
+
+SSL、HTTPS
+
+Markdown
+
+hexo博客
+
+Githu">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>使用服务器搭建Typecho博客 | Hexo</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    
+    <script src="/libs/jquery/jquery.min.js"></script>
+    
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper head-container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Hexo</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Hexo</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			Contact
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">使用服务器搭建Typecho博客</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Typecho/">
+                                <span class="chip bg-color">Typecho</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/blog/" class="post-category">
+                                blog
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2019-03-03
+                </div>
+                
+
+                
+
+                
+
+                
+				
+                
+            </div>
+            
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p><strong>关键词</strong></p>
+<ul>
+<li><p>VPS（Virtual Private Server）</p>
+</li>
+<li><p>服务器</p>
+</li>
+<li><p>域名</p>
+</li>
+<li><p>ip</p>
+</li>
+<li><p>SSH</p>
+</li>
+<li><p>宝塔</p>
+</li>
+<li><p>Nginx</p>
+</li>
+<li><p>PHP</p>
+</li>
+<li><p>MySQl</p>
+</li>
+<li><p>typecho博客</p>
+</li>
+<li><p>SSL、HTTPS</p>
+</li>
+<li><p>Markdown</p>
+</li>
+<li><p>hexo博客</p>
+</li>
+<li><p>Github</p>
+</li>
+</ul>
+<a id="more"></a>
+
+<h3 id="博客搭建"><a href="#博客搭建" class="headerlink" title="博客搭建"></a>博客搭建</h3><p>从技术角度讲，博客无非就是一个web页面，既然是web，那么两样东西必不可少：服务器与html</p>
+<ul>
+<li><p>第三方平台</p>
+</li>
+<li><p><strong><em>服务器搭建</em></strong></p>
+</li>
+<li><p><strong><em>基于免费云空间搭建静态网页</em></strong></p>
+</li>
+</ul>
+<h3 id="第三方平台"><a href="#第三方平台" class="headerlink" title="第三方平台"></a>第三方平台</h3><ul>
+<li><code>csdn</code></li>
+<li><code>博客园</code>：<a href="https://www.cnblogs.com/huangtc/" target="_blank" rel="noopener">我的博客园</a></li>
+<li>简书</li>
+<li>其它</li>
+</ul>
+<h3 id="服务器搭建"><a href="#服务器搭建" class="headerlink" title="服务器搭建"></a>服务器搭建</h3><h4 id="了解下-VPS"><a href="#了解下-VPS" class="headerlink" title="了解下 VPS"></a>了解下 VPS</h4><p><strong><em>虚拟专用服务器</em></strong>（英语：Virtual private server，缩写为<code>VPS</code>），是将一台<a href="https://zh.wikipedia.org/wiki/%E6%9C%8D%E5%8A%A1%E5%99%A8" target="_blank" rel="noopener">服务器</a>分割成多个虚拟专享服务器的服务。实现<code>VPS</code>的技术分为容器技术和<a href="https://zh.wikipedia.org/wiki/%E8%99%9A%E6%8B%9F%E6%9C%BA" target="_blank" rel="noopener">虚拟机</a>技术 。在容器或虚拟机中，每个<code>VPS</code>都可分配独立公网<a href="https://zh.wikipedia.org/wiki/IP%E5%9C%B0%E5%9D%80" target="_blank" rel="noopener">IP地址</a>、独立<a href="https://zh.wikipedia.org/wiki/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F" target="_blank" rel="noopener">操作系统</a>、实现不同<code>VPS</code>间磁盘空间、<a href="https://zh.wikipedia.org/wiki/%E5%86%85%E5%AD%98" target="_blank" rel="noopener">内存</a>、<a href="https://zh.wikipedia.org/wiki/CPU" target="_blank" rel="noopener">CPU</a>资源、进程和系统配置的隔离，为用户和<a href="https://zh.wikipedia.org/wiki/%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F" target="_blank" rel="noopener">应用程序</a>模拟出“独占”使用计算资源的体验。<code>VPS</code>可以像独立服务器一样，重装操作系统，安装程序，单独重启服务器。</p>
+<h4 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h4><ul>
+<li>服务器和域名</li>
+</ul>
+<ol>
+<li><p>服务器选择</p>
+<blockquote>
+<p>对于服务器选择，一般分为国内服务器和国外服务器，大致区别如下：</p>
+<ul>
+<li>国内服务器需要域名备案才能使用，缺点是价格贵(学生机会便宜些)，带宽低；优点是国内访问很稳定，同时也可以使用国内CDN加速。</li>
+<li>国外服务器不需要域名备案，缺点是网络可能会经常波动；优点大概是比国内便宜，带宽足。</li>
+<li>香港服务器也是不需要备案的，访问速度和国内差不多，如果不想备案，可以直接选择香港服务器。</li>
+</ul>
+</blockquote>
+<p>注意：国内域名注册购买的时候就需要需要实名认证，如果要将域名解析到服务器的<code>ip</code>需要备案</p>
+<p>我买的是阿里云香港轻量服务器，界面如下：</p>
+<p><img src="https://i.loli.net/2019/03/18/5c8fb83d53040.jpg" alt="轻量服务器控制台界面"></p>
+</li>
+<li><p>域名</p>
+<blockquote>
+<p>注册的话，国内的可以选择阿里云、腾讯云，需要实名；不想实名的直接选择国外<a href="https://www.namesilo.com/?rid=251f960qe" target="_blank" rel="noopener">Namesilo</a> 等注册商, </p>
+<p>在<a href="https://www.namesilo.com/?rid=251f960qe" target="_blank" rel="noopener">Namesilo</a> 注册可以参考<a href="https://zhuanlan.zhihu.com/p/25627048" target="_blank" rel="noopener">注册购买域名的教程</a></p>
+</blockquote>
+</li>
+<li><p>域名解析 </p>
+</li>
+</ol>
+<p>准备好了域名后，先去域名商后台，找到<code>DNS</code>(解析)设置，解析域名的<code>A</code>记录到服务器的<code>ip</code>地址。</p>
+<p>一般而言，我们在购买域名之后，不管是<code>Namesilo</code>域名注册商，还是其他注册商，直接面对的问题就是域名解析。域名解析分两种方法，一种就是直接利用域名自由的解析<code>A记录</code>或者<code>CNAME</code>别名解析，一种就是更换<code>DNS</code>直接用第三方<code>DNS</code>解析</p>
+<pre><code>#提示：这里可以解析主域名，比如huangtiancai.xyz，也可以解析二级域名，比如ty.huangtiancai.xyz、xx.huangtiancai.xyz。解析的是什么域名，到时候就使用什么域名。</code></pre><p>注意：<a href="#锚点1">域名解析详见文末</a></p>
+<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>先去<code>VPS</code>服务器后台，重装个服务器，这里建议选择<code>CentOS 7</code>系统。</p>
+<p>然后使用<code>SSH</code>客户端(比如<code>Xshell</code>)登录<code>VPS</code>，使用命令：</p>
+<pre><code>#CentOS系统:我的服务器安装的是Centos7.3
+wget -O install.sh http://download.bt.cn/install/install_6.0.sh &amp;&amp; sh install.sh</code></pre><p>安装完成后会直接在<code>SSH</code>客户端显示后台信息。</p>
+<p><img src="https://i.loli.net/2019/03/28/5c9cdda880e4d.png" alt=""></p>
+<pre><code>提示：如果我们后续未修改密码却忘记了密码的话，可以在SSH客户端使用命令bt default来查看安装后的默认后台信息。</code></pre><p>然后登陆后台，这时候宝塔会提示让我们选择环境::</p>
+<p><img src="https://i.loli.net/2019/03/28/5c9cde3ca4a7b.png" alt=""></p>
+<p>这里建议选择<code>LNMP</code>，环境为<code>Nginx 1.15</code>、<code>PHP 7.2</code>、<code>Mysql 5.5</code>，如果内存<code>1G</code>建议选择<code>Mysql 5.6</code>、<code>2G</code>选择<code>5.7</code>。选择好了后点击一键安装即可。</p>
+<p>安装环境的时候等待时间可能会有点长，可以点击左上角红色的消息盒子查看进度，也可以通过左侧软件管理查看进度。</p>
+<p><img src="https://i.loli.net/2019/03/28/5c9cdf3a66af7.png" alt=""></p>
+<p>安装完成后，点击左侧软件管理-宝塔插件，安装<code>宝塔一键部署源码</code>，装好后点击设置。</p>
+<p><img src="https://i.loli.net/2019/03/28/5c9cdf3ad4ce6.png" alt=""></p>
+<p>然后选择博客一栏，会出现一些常用的博客程序。</p>
+<p><img src="https://i.loli.net/2019/03/28/5c9cdf184a89c.png" alt=""></p>
+<p>根据自己的喜好选择一个博客程序，然后点击<code>一键部署</code></p>
+<pre><code>#关于程序选择，这里建议首选Wordpress或者Typecho，大致区别如下：
+Wordpress：使用人数全球最多，插件、模板都多，可定制性强，不过收费主题都有点贵。
+Typecho：也就是博主现在使用的程序，轻巧，后台简洁，挺适合做个人博客，但搞其它的就不适合了。</code></pre><p>然后会要你填入域名，也就是你解析到这个服务器<code>ip</code>的域名。</p>
+<p>提交后，初步算安装完成了，然后记住给你的数据库名、用户名和密码。</p>
+<p>再点击左侧的网站，找到你的域名，点击设置。</p>
+<p>再点击伪静态，选择自己所安装的程序名称，比如<code>Typecho</code>，再点击保存即可。</p>
+<p><img src="https://i.loli.net/2019/03/28/5c9cdf2577c02.png" alt=""></p>
+<p>然后打开你的域名，填入数据库信息，管理员信息安装即可。</p>
+<p>我使用的主题是：</p>
+<p>Mirages主题：<a href="https://get233.com/archives/mirages-intro.html" target="_blank" rel="noopener">https://get233.com/archives/mirages-intro.html</a></p>
+<h3 id="基于免费云空间搭建静态网页"><a href="#基于免费云空间搭建静态网页" class="headerlink" title="基于免费云空间搭建静态网页"></a>基于免费云空间搭建静态网页</h3><p>详见：<a href="">使用hexo-github搭建免费个人博客</a></p>
+<p><a name="锚点1">域名解析</a></p>
+<p>一般而言，我们在购买域名之后，不管是<code>Namesilo</code>域名注册商，还是其他注册商，直接面对的问题就是域名解析。域名解析分两种方法，一种就是直接利用域名自由的解析<code>A记录</code>或者<code>CNAME</code>别名解析，一种就是更换<code>DNS</code>直接用第三方<code>DNS</code>解析</p>
+<p>注意：</p>
+<ul>
+<li><p>在不同的域名注册商注册到的域名之后可以更换<code>DNS</code>直接用第三方<code>DNS</code>解析，然后都用统一的第三方<code>DNS</code>管理域名,我是在<a href="https://www.namesilo.com/?rid=251f960qe" target="_blank" rel="noopener">Namesilo</a> 注册，我用的是阿里云（比较方便管理）<code>DNS</code>解析</p>
+</li>
+<li><p><code>IP</code>和域名绑定有两种情况：带<code>www</code>和不带<code>www</code>的</p>
+</li>
+<li><p>域名配置最常见有2种方式，<code>CNAME</code>和<code>A记录</code>，<code>CNAME</code>填写<code>域名</code>，<code>A记录</code>填写<code>IP</code></p>
+</li>
+</ul>
+<p>相关:</p>
+<p><strong>域名后缀</strong></p>
+<blockquote>
+<p>域名后缀，亦被称为顶级域名，是指代表一个域名类型的符号。 不同后缀的域名有不同的含义。目前域名共分为两类：国别域名，例如中国的<code>.cn</code>、美国的<code>.us</code>、俄罗斯的<code>.ru</code>、以及国际通用域名，例如<code>.com</code>、<code>.xyz</code>、<code>.top</code>、.<code>wang</code>、<code>pub</code>、<code>.xin</code>、.net`等1000多种，所有域名后缀作用无差异，仅外观和本身含义不同，但只有少数例如举例中的域名后缀可以在国内支持网站的备案 .</p>
+</blockquote>
+<p>国际域名-国际顶级域名</p>
+<p>常用后缀:<code>com</code>    <code>org</code>  <code>gov</code>  <code>edu</code> <code>tech</code>  <code>net</code>   <code>xyz</code>  <code>top</code>等等</p>
+<p><strong>国内域名</strong></p>
+<blockquote>
+<p><code>cn</code>: 中国国家顶级域名<br><code>com.cn</code> 中国公司和商业组织域名<br><code>net.cn</code> 中国网络服务机构域名<br><code>gov.cn</code> 中国政府机构域名<br><code>org.cn</code> 中国非盈利组织域名</p>
+</blockquote>
+<p><strong>国别域名</strong></p>
+<blockquote>
+<p><a href="https://baike.baidu.com/item/%E5%9B%BD%E5%88%AB%E5%9F%9F%E5%90%8D" target="_blank" rel="noopener">国别域名</a>只能是由两个英文字母所组成，比如：代表中国大陆的是<code>.cn</code> ,代表美国的是<code>.us</code> ，代表欧盟的是<code>.eu</code> 等等</p>
+<p>注意:照严格意义来说，国别域名现在已经超出了“国家”的范畴，根据 <code>ICANN</code>(互联网名称与数字地址分配机构)已经开放的249个国别域名后缀显示，除<strong>“国家”</strong>以外，还有许多的<strong>“地区”</strong>拥有自己的<strong>“国别域名”</strong>。</p>
+<p>因此，现在的国别域名包含了如下的几层意思：</p>
+<ol>
+<li><p>主权国家的域名后缀，例如<code>.cn</code>(中国大陆) <code>.us</code>(美国) <code>.de</code>(德国) <code>.uk</code>(英国) <code>.fr</code>(法国) 等等;</p>
+</li>
+<li><p>国家共同体的域名后缀，例如 <code>.eu</code>(欧盟)</p>
+</li>
+<li><p>主权国家特别区域的域名后缀，例如 <code>.hk</code>(香港) .mo(澳门) <code>.tw</code>(台湾) <code>.gi</code>(<a href="https://baike.baidu.com/item/%E7%9B%B4%E5%B8%83%E7%BD%97%E9%99%80" target="_blank" rel="noopener">直布罗陀</a>)等等;</p>
+</li>
+<li><p>主权国家的<a href="https://baike.baidu.com/item/%E6%B5%B7%E5%A4%96%E9%A2%86%E5%9C%9F" target="_blank" rel="noopener">海外领土</a>的域名后缀，通常是一些偏远小岛，例如 <code>.im</code>(英属人岛) <code>.as</code>(美属<a href="https://baike.baidu.com/item/%E8%90%A8%E6%91%A9%E4%BA%9A" target="_blank" rel="noopener">萨摩亚</a>) <code>.gf</code>(法属<a href="https://baike.baidu.com/item/%E5%9C%AD%E4%BA%9A%E9%82%A3" target="_blank" rel="noopener">圭亚那</a>)等等;</p>
+</li>
+</ol>
+</blockquote>
+<p>4.</p>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://blog.totiancai.com" rel="external nofollow noreferrer">HTC</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://blog.totiancai.com/2019/03/03/shi-yong-fu-wu-qi-da-jian-typecho-bo-ke/">https://blog.totiancai.com/2019/03/03/shi-yong-fu-wu-qi-da-jian-typecho-bo-ke/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="https://blog.totiancai.com" target="_blank">HTC</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/Typecho/">
+                                    <span class="chip bg-color">Typecho</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2019/03/04/markdown/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="Markdown">
+                        
+                        <span class="card-title">Markdown</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            目录
+Markdown 是什么？
+为什么要使用Markdown?
+Markdown怎么使用？
+Markdown 都有哪些人在用？
+尝试一下Markdown的使用！
+Markdown 进阶语法！
+
+
+
+学习目标通过学习，能对Markdown语
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2019-03-04
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/blog/" class="post-category">
+                                    blog
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Markdown/">
+                        <span class="chip bg-color">Markdown</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2019/03/02/shi-yong-hexo-github-da-jian-mian-fei-ge-ren-bo-ke/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="使用hexo+github搭建免费个人博客">
+                        
+                        <span class="card-title">使用hexo+github搭建免费个人博客</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            ​    玩博客有三种方式，一是在平台写，但是限制多，改个样式。二是自己购买域名和vps，自己搭建后台，使用tychpeo/wordpress之类的框架搭建博客系统，创建一个完完整整属于自己的博客，但是过不了多会“疲”了，因为维护起来实在太
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-03-02
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/blog/" class="post-category">
+                                    blog
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/hexo/">
+                        <span class="chip bg-color">hexo</span>
+                    </a>
+                    
+                    <a href="/tags/hexo-theme-matery/">
+                        <span class="chip bg-color">hexo-theme-matery</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+    
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+    <footer class="page-footer bg-color">
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2019</span>
+            <a href="https://blog.totiancai.com" target="_blank">HTC</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181062873" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1181062873" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

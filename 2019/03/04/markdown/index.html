@@ -1,0 +1,1445 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Markdown, Hexo">
+    <meta name="description" content="目录
+Markdown 是什么？
+为什么要使用Markdown?
+Markdown怎么使用？
+Markdown 都有哪些人在用？
+尝试一下Markdown的使用！
+Markdown 进阶语法！
+
+
+
+学习目标通过学习，能对Markdown语">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Markdown | Hexo</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    
+    <script src="/libs/jquery/jquery.min.js"></script>
+    
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper head-container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Hexo</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Hexo</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			Contact
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">Markdown</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Markdown/">
+                                <span class="chip bg-color">Markdown</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/blog/" class="post-category">
+                                blog
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2019-03-04
+                </div>
+                
+
+                
+
+                
+
+                
+				
+                
+            </div>
+            
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a><a name="锚点1">目录</a></h1><ol>
+<li>Markdown 是什么？</li>
+<li>为什么要使用Markdown?</li>
+<li>Markdown怎么使用？</li>
+<li>Markdown 都有哪些人在用？</li>
+<li>尝试一下Markdown的使用！</li>
+<li>Markdown 进阶语法！<a id="more"></a>
+
+</li>
+</ol>
+<h1 id="学习目标"><a href="#学习目标" class="headerlink" title="学习目标"></a>学习目标</h1><p>通过学习，能对Markdown语法有个比较全面的认知，对日常工作写作排版尽量放弃Word、txt等文本工具，改直接用Markdown语言写文档。</p>
+<h1 id="学习思路"><a href="#学习思路" class="headerlink" title="学习思路"></a>学习思路</h1><ol>
+<li><p>开始先记住 # 这是标题  ## 这二级标题 ### 这是三级标题</p>
+</li>
+<li><p>然后可以记住用 1. 第一点、- 第一点 做列表超级方便</p>
+</li>
+<li><p>写作的正文总要加重点吧，<strong>加粗</strong> 、<em>斜体</em>、<del>删除线</del>就开始派上用场了</p>
+</li>
+<li><p>如果需要写代码或者命令的话<br> <code>\</code>这是单行代码``</p>
+<p> \t这是多行代码<br> int i;</p>
+</li>
+<li><p>其他</p>
+</li>
+</ol>
+<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="Markdown是什么？"><a href="#Markdown是什么？" class="headerlink" title="Markdown是什么？"></a>Markdown是什么？</h2><p><img src="https://i.loli.net/2019/03/29/5c9dba1b3e470.png" alt=""></p>
+<table>
+<thead>
+<tr>
+<th>互联网媒体类型</th>
+<th><code>text/markdown</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>统一类型标识</td>
+<td><code>net.daringfireball.markdown</code></td>
+</tr>
+<tr>
+<td>开发者</td>
+<td><a href="https://zh.wikipedia.org/wiki/John_Gruber" target="_blank" rel="noopener">John Gruber</a> (in collaboration with <a href="https://zh.wikipedia.org/wiki/Aaron_Swartz" target="_blank" rel="noopener">Aaron Swartz</a> on the syntax)</td>
+</tr>
+<tr>
+<td>初始版本</td>
+<td>2004年3月19日（15年前）</td>
+</tr>
+<tr>
+<td>最新版本</td>
+<td>1.0.1 (2004年12月17日（14年前)</td>
+</tr>
+<tr>
+<td>格式类型</td>
+<td><a href="https://zh.wikipedia.org/w/index.php?title=Markup_language&action=edit&redlink=1" target="_blank" rel="noopener">Markup language</a></td>
+</tr>
+<tr>
+<td>延伸成</td>
+<td><a href="https://zh.wikipedia.org/w/index.php?title=MultiMarkdown&action=edit&redlink=1" target="_blank" rel="noopener">MultiMarkdown</a>, <a href="https://zh.wikipedia.org/w/index.php?title=Markdown_Extra&action=edit&redlink=1" target="_blank" rel="noopener">Markdown Extra</a>, <a href="https://zh.wikipedia.org/w/index.php?title=CommonMark&action=edit&redlink=1" target="_blank" rel="noopener">CommonMark</a></td>
+</tr>
+<tr>
+<td>自由格式</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>网站</td>
+<td><a href="https://daringfireball.net/projects/markdown" target="_blank" rel="noopener">daringfireball.net/projects/markdown</a></td>
+</tr>
+</tbody></table>
+<p>Markdwon 是一种轻量级 <strong>标记语言</strong>，它以纯文本形式（易读、易写、易更改）编写文档，并最终以HTLM格式发布。Markdown也可以理解为将以 MARKDOWN语法编写的语言转换成HTML内容的工具。<a href="https://zh.wikipedia.org/wiki/Markdown" target="_blank" rel="noopener">维基百科</a> | <a href="https://baike.baidu.com/item/markdown/3245829?fr=aladdin" target="_blank" rel="noopener">百度百科</a></p>
+<h2 id="为什么要使用Markdown"><a href="#为什么要使用Markdown" class="headerlink" title="为什么要使用Markdown?"></a>为什么要使用Markdown?</h2><ul>
+<li>它是易读（看起来舒服）、易写（语法简单）、易更改（纯文本）。处处体现着极简主义的影子。</li>
+<li>兼容HTML,可以转换为HTML格式发布。</li>
+<li>跨平台使用。</li>
+<li>越来越多的网站支持Markdown.</li>
+<li>摆脱Word,txt！<h2 id="Markdown怎么使用？"><a href="#Markdown怎么使用？" class="headerlink" title="Markdown怎么使用？"></a>Markdown怎么使用？</h2>Markdown语法分为如下几大部分：</li>
+<li>标题</li>
+<li>段落</li>
+<li>区块引用</li>
+<li>代码区块</li>
+<li>强调</li>
+<li>列表</li>
+<li>分割线</li>
+<li>链接</li>
+<li>图片</li>
+<li>反斜杠</li>
+<li>符号</li>
+<li>表格</li>
+<li>流程图<h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3>两种形式</li>
+</ul>
+<ol>
+<li>使用 = 和 - ，标记<strong>遗迹</strong>和<strong>二级</strong>标题<br>示例代码(<strong>注意”=”和”-“数量至少大于2个</strong>)<br>```<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1>二级标题 </li>
+</ol>
+<p>–</p>
+<pre><code>示例效果：
+
+一级标题
+==
+二级标题
+--
+
+2. 使用 # 可以表示 1-6 级标题
+示例md代码：
+**注意 # 后面要加一个空格，你可以选择性地「闭合」类 atx 样式的标题，这纯粹只是美观用的，若是觉得这样看起来比较舒适，你就可以在行尾加上 #，而行尾的 # 数量也不用和开头一样（行首的井字符数量决定标题的阶数**</code></pre><h1 id="第一级标题"><a href="#第一级标题" class="headerlink" title="第一级标题"></a>第一级标题</h1><h2 id="第二级标题"><a href="#第二级标题" class="headerlink" title="第二级标题"></a>第二级标题</h2><h3 id="第三级标题"><a href="#第三级标题" class="headerlink" title="第三级标题"></a>第三级标题</h3><h4 id="第四级标题"><a href="#第四级标题" class="headerlink" title="第四级标题"></a>第四级标题</h4><h5 id="第五级标题"><a href="#第五级标题" class="headerlink" title="第五级标题"></a>第五级标题</h5><h6 id="第六级标题"><a href="#第六级标题" class="headerlink" title="第六级标题"></a>第六级标题</h6><pre><code>示例效果：
+# 第一级标题 
+## 第二级标题
+### 第三级标题
+#### 第四级标题
+##### 第五级标题
+###### 第六级标题
+
+
+
+### 段落
+
+
+
+###  区块引用
+在段落的每行或者只在第一行使用符号 &gt; ,还可使用多个嵌套引用，如</code></pre><blockquote>
+<p>区块引用</p>
+<blockquote>
+<p>嵌套引用</p>
+<blockquote>
+<p>三嵌套引用</p>
+<blockquote>
+<p>四嵌套引用</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<pre><code>示例效果：
+&gt;区块引用 第一行
+&gt;区块引用 第二行
+
+&gt;区块引用
+&gt;&gt;嵌套引用
+&gt;&gt;&gt;三嵌套引用
+&gt;&gt;&gt;
+&gt;&gt;&gt;&gt;四嵌套引用
+
+### 代码区块
+1. 用反引号来控制```  ```` ，或者在预览页面鼠标右键，会在窗口中弹出一个子窗口，选择：插入—代码块；
+2. 在第一个反引号```后输入javascript,或者在预览页面点击右下角的“select  a language” ，在其中输入“javascript并选择，点击确认则会为代码块中代码添加颜色（按照javascript代码的上色规则）；
+示例效果：
+```javascript
+var myDate = new Date();
+var year = myDate.getFullYear();
+var month = myDate.getMonth() + 1;
+var day = myDate.getDate();
+var now = year + &quot;-&quot; + month + &quot;-&quot; + day;
+
+var yarrs = date1[0].value.split(&quot;-&quot;);
+var ytime = new Date(yarrs[0], yarrs[1], yarrs[2]);
+var ytimes = ytime.getTime();
+
+var arrs = now.split(&quot;-&quot;);
+var lktime = new Date(arrs[0], arrs[1], arrs[2]);
+var lktimes = lktime.getTime();
+
+if (ytimes &gt; lktimes) {
+    alert(&quot;请加完班再填写实际加班信息！&quot;);
+    return false;
+}</code></pre><h3 id="强调"><a href="#强调" class="headerlink" title="强调"></a>强调</h3><p>在强调内容两侧分别加上 <code>*</code> 或者<code>_</code>    </p>
+<p>示例代码：</p>
+<pre><code>**粗体**        //左右各一个 **
+__粗体__        //左右各一个 __  (左右各两个&quot;_&quot;)
+*斜体*        //左右各一个 *
+_斜体_        //左右各一个 _
+</code></pre><p>示例效果：</p>
+<p><strong>粗体</strong></p>
+<p><strong>粗体</strong></p>
+<p><em>斜体</em></p>
+<p><em>斜体</em></p>
+<h3 id="列表（有序，无序）"><a href="#列表（有序，无序）" class="headerlink" title="列表（有序，无序）"></a>列表（有序，无序）</h3><h4 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h4><p>使用<code>-</code>、<code>+</code>或者<code>*</code></p>
+<pre><code>- 第一项
+- 第二项
++ 第三项
+* 第四项</code></pre><p>示例效果：</p>
+<ul>
+<li>第一项</li>
+<li>第二项</li>
+</ul>
+<ul>
+<li>第三项</li>
+</ul>
+<ul>
+<li>第四项</li>
+</ul>
+<h4 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h4><pre><code>1. 第一项
+2. 第二项
+3. 第三项
+4. 第四项</code></pre><p>示例效果：</p>
+<ol>
+<li>第一项</li>
+<li>第二项</li>
+<li>第三项</li>
+<li>第四项</li>
+</ol>
+<h3 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h3><p>分割线最常使用就是三个或以上的 <code>*</code> ， <code>---</code> <code>___</code></p>
+<p>示例代码：</p>
+<pre class="line-numbers language-javscript"><code class="language-javscript">***
+---
+___
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<hr>
+<hr>
+<hr>
+<h3 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h3><p>链接可以由两种形式生成，<strong>行内式</strong> 和 <strong>参考式</strong>。</p>
+<p><strong>行内式</strong></p>
+<p>示例代码：</p>
+<pre><code>[GitHub](http://github.com)
+&lt;http://github.com&gt;</code></pre><p>示例效果：</p>
+<p><a href="http://github.com" target="_blank" rel="noopener">GitHub</a></p>
+<p><a href="http://github.com" target="_blank" rel="noopener">http://github.com</a></p>
+<p><strong>参考式</strong></p>
+<p>示例代码：</p>
+<pre><code>[GitHub][1]
+[1]:http://github.com</code></pre><p><a href="http://github.com" target="_blank" rel="noopener">GitHub</a></p>
+<p><strong>注意：</strong>上述的 <a href="http://github.com" target="_blank" rel="noopener">1</a>:<a href="http://github.com不出现在区块中。" target="_blank" rel="noopener">http://github.com不出现在区块中。</a></p>
+<h3 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h3><p>添加图片形式和链接相似，只需要在链接的基础上前方加一个 <strong>！</strong>号</p>
+<p><img src="https://avatars1.githubusercontent.com/u/38580609?s=40&v=4" alt="logo"></p>
+<h3 id="反斜杠"><a href="#反斜杠" class="headerlink" title="反斜杠 \"></a>反斜杠 <code>\</code></h3><p>相当于<strong>反转义</strong>作用。使符号成为普通符号。比如</p>
+<pre><code>*iteral asterisks*       //设置斜体
+\*literal asterisks\*    //使用反斜杆使 * 变成 正常的 * </code></pre><p><em>iteralasterisks</em></p>
+<p>*literal asterisks*</p>
+<p>Markdown 支持以下这些符号前面加上反斜杠来帮助插入普通的符号：</p>
+<pre><code>\   反斜线
+`   反引号
+*   星号
+_   底线
+{}  花括号
+[]  方括号
+()  括弧
+#   井字号
++   加号
+-   减号
+.   英文句点
+!   惊叹号</code></pre><h3 id="符号"><a href="#符号" class="headerlink" title="符号 ``"></a>符号 ``</h3><p><code>Ctrl+A</code>   </p>
+<p><code>Ctrl+C</code></p>
+<h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><p>示例代码：</p>
+<pre><code>序号 | 日期 | 假别 | 标准上下班时间 | 时间起 | 时间止 | 时数
+---|------|--------|---------|---------|-----|------
+1 | 2019-03-04| 年假 | 08:00-17:00|08:00|17:00|8
+2 |2019-03-05|年假|08:00-17:00|08:00|17:00|8</code></pre><table>
+<thead>
+<tr>
+<th>序号</th>
+<th>日期</th>
+<th>假别</th>
+<th>标准上下班时间</th>
+<th>时间起</th>
+<th>时间止</th>
+<th>时数</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>2019-03-04</td>
+<td>年假</td>
+<td>08:00-17:00</td>
+<td>08:00</td>
+<td>17:00</td>
+<td>8</td>
+</tr>
+<tr>
+<td>2</td>
+<td>2019-03-05</td>
+<td>年假</td>
+<td>08:00-17:00</td>
+<td>08:00</td>
+<td>17:00</td>
+<td>8</td>
+</tr>
+</tbody></table>
+<h3 id="流程图"><a href="#流程图" class="headerlink" title="流程图"></a>流程图</h3><p>横向流程图源码格式：</p>
+<pre><code>​```mermaid
+
+graph LR
+
+A[方形] --&gt;B(圆角)
+
+    B --&gt; C{条件a}
+
+    C --&gt;|a=1| D[结果1]
+
+    C --&gt;|a=2| E[结果2]
+
+    F[横向流程图]
+
+​```</code></pre><pre class="line-numbers language-mermaid"><code class="language-mermaid">graph LR
+A[方形] -->B(圆角)
+B --> C{条件a}
+C --> |a<1| 结果1
+C --> |a>=1| 结果2
+F[横向流程图]
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>竖向流程图源码格式：</p>
+<pre><code>​```mermaid
+
+graph TD
+
+A[方形] --&gt;B(圆角)
+
+    B --&gt; C{条件a}
+
+    C --&gt;|a=1| D[结果1]
+
+    C --&gt;|a=2| E[结果2]
+
+    F[竖向流程图]
+
+​```</code></pre><pre class="line-numbers language-mermaid"><code class="language-mermaid">graph TD
+A(开始框)-->B(圆角)
+B-->C{条件a}
+C -->|a=1| D[结果1]
+C -->|a>=1| E[结果2]
+F[竖向流程图]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="Markdown锚点"><a href="#Markdown锚点" class="headerlink" title="Markdown锚点"></a>Markdown锚点</h3><pre><code>#####&lt;a href=&quot;#第一段的锚点名称&quot;&gt;第一段标题&lt;/a&gt;
+####&lt;a name=&quot;第一段的锚点名称&quot;&gt;第一段标题&lt;/a&gt;</code></pre><p><a href="#锚点1">回到目录</a></p>
+<h2 id="Markdown都哪些人在用？"><a href="#Markdown都哪些人在用？" class="headerlink" title="Markdown都哪些人在用？"></a>Markdown都哪些人在用？</h2><p>Markdown 的使用作者：</p>
+<ul>
+<li>Github</li>
+<li>简书</li>
+<li>CSDN</li>
+<li>StackOverFlow</li>
+<li>等等</li>
+</ul>
+<h2 id="尝试一下Markdown的使用"><a href="#尝试一下Markdown的使用" class="headerlink" title="尝试一下Markdown的使用"></a>尝试一下Markdown的使用</h2><ul>
+<li><strong>typora</strong>（本文档就是typora编辑的）</li>
+<li>notepad++ :需要下载插件</li>
+<li>等等</li>
+</ul>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://blog.totiancai.com" rel="external nofollow noreferrer">HTC</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://blog.totiancai.com/2019/03/04/markdown/">https://blog.totiancai.com/2019/03/04/markdown/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="https://blog.totiancai.com" target="_blank">HTC</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/Markdown/">
+                                    <span class="chip bg-color">Markdown</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2019/03/05/markdown-jin-jie/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="Markdown进阶">
+                        
+                        <span class="card-title">Markdown进阶</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Markdown 嵌入图片、音频、视频参考：Typora 官方文档
+
+
+插入图片
+插入音频&lt;audio id=&quot;audio&quot; controls=&quot;&quot; preload=&quot;none&quo
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2019-03-05
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/blog/" class="post-category">
+                                    blog
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Markdown/">
+                        <span class="chip bg-color">Markdown</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2019/03/03/shi-yong-fu-wu-qi-da-jian-typecho-bo-ke/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="使用服务器搭建Typecho博客">
+                        
+                        <span class="card-title">使用服务器搭建Typecho博客</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            关键词
+
+VPS（Virtual Private Server）
+
+服务器
+
+域名
+
+ip
+
+SSH
+
+宝塔
+
+Nginx
+
+PHP
+
+MySQl
+
+typecho博客
+
+SSL、HTTPS
+
+Markdown
+
+hexo博客
+
+Githu
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-03-03
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/blog/" class="post-category">
+                                    blog
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Typecho/">
+                        <span class="chip bg-color">Typecho</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+    
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+    <footer class="page-footer bg-color">
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2019</span>
+            <a href="https://blog.totiancai.com" target="_blank">HTC</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181062873" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1181062873" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
