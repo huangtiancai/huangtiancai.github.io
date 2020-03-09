@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hexo</title>
+  <title>HTC</title>
   
   
   <link href="/atom.xml" rel="self"/>
@@ -371,7 +371,7 @@
       
         
         
-          &lt;p&gt;简而言之，&lt;code&gt;选择器&lt;/code&gt;是 CSS 规则的一部分且位于 CSS 声明块前。&lt;br&gt;&lt;img src=&quot;http://pt2sht59w.bkt.clouddn.com/blog_imgs/css_syntax_ruleset.png.png&quot;
+          &lt;p&gt;简而言之，&lt;code&gt;选择器&lt;/code&gt;是 CSS 规则的一部分且位于 CSS 声明块前。&lt;br&gt;&lt;img
         
       
     
