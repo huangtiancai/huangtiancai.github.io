@@ -56,11 +56,11 @@
       <category term="WebGIS" scheme="https://blog.totiancai.com/categories/WebGIS/"/>
     
     
-      <category term="ArcGIS API for JavaScript" scheme="https://blog.totiancai.com/tags/ArcGIS-API-for-JavaScript/"/>
-    
       <category term="webgis开发" scheme="https://blog.totiancai.com/tags/webgis%E5%BC%80%E5%8F%91/"/>
     
       <category term="arcgis开发" scheme="https://blog.totiancai.com/tags/arcgis%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="ArcGIS API for JavaScript" scheme="https://blog.totiancai.com/tags/ArcGIS-API-for-JavaScript/"/>
     
   </entry>
   
@@ -110,11 +110,11 @@
       <category term="WebGIS" scheme="https://blog.totiancai.com/categories/WebGIS/"/>
     
     
+      <category term="ArcGIS API for JavaScript" scheme="https://blog.totiancai.com/tags/ArcGIS-API-for-JavaScript/"/>
+    
       <category term="地图JS库" scheme="https://blog.totiancai.com/tags/%E5%9C%B0%E5%9B%BEJS%E5%BA%93/"/>
     
       <category term="WebGIS框架" scheme="https://blog.totiancai.com/tags/WebGIS%E6%A1%86%E6%9E%B6/"/>
-    
-      <category term="ArcGIS API for JavaScript" scheme="https://blog.totiancai.com/tags/ArcGIS-API-for-JavaScript/"/>
     
       <category term="可视化图表库" scheme="https://blog.totiancai.com/tags/%E5%8F%AF%E8%A7%86%E5%8C%96%E5%9B%BE%E8%A1%A8%E5%BA%93/"/>
     
@@ -249,7 +249,7 @@
     <link href="https://blog.totiancai.com/2019/03/02/shi-yong-hexo-github-da-jian-mian-fei-ge-ren-bo-ke/"/>
     <id>https://blog.totiancai.com/2019/03/02/shi-yong-hexo-github-da-jian-mian-fei-ge-ren-bo-ke/</id>
     <published>2019-03-02T15:03:08.000Z</published>
-    <updated>2019-06-23T13:11:02.148Z</updated>
+    <updated>2020-03-10T10:48:09.536Z</updated>
     
     <summary type="html">
     
