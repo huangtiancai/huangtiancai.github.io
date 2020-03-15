@@ -56,11 +56,11 @@
       <category term="WebGIS" scheme="https://blog.totiancai.com/categories/WebGIS/"/>
     
     
+      <category term="ArcGIS API for JavaScript" scheme="https://blog.totiancai.com/tags/ArcGIS-API-for-JavaScript/"/>
+    
       <category term="webgis开发" scheme="https://blog.totiancai.com/tags/webgis%E5%BC%80%E5%8F%91/"/>
     
       <category term="arcgis开发" scheme="https://blog.totiancai.com/tags/arcgis%E5%BC%80%E5%8F%91/"/>
-    
-      <category term="ArcGIS API for JavaScript" scheme="https://blog.totiancai.com/tags/ArcGIS-API-for-JavaScript/"/>
     
   </entry>
   
@@ -110,11 +110,11 @@
       <category term="WebGIS" scheme="https://blog.totiancai.com/categories/WebGIS/"/>
     
     
-      <category term="ArcGIS API for JavaScript" scheme="https://blog.totiancai.com/tags/ArcGIS-API-for-JavaScript/"/>
-    
       <category term="地图JS库" scheme="https://blog.totiancai.com/tags/%E5%9C%B0%E5%9B%BEJS%E5%BA%93/"/>
     
       <category term="WebGIS框架" scheme="https://blog.totiancai.com/tags/WebGIS%E6%A1%86%E6%9E%B6/"/>
+    
+      <category term="ArcGIS API for JavaScript" scheme="https://blog.totiancai.com/tags/ArcGIS-API-for-JavaScript/"/>
     
       <category term="可视化图表库" scheme="https://blog.totiancai.com/tags/%E5%8F%AF%E8%A7%86%E5%8C%96%E5%9B%BE%E8%A1%A8%E5%BA%93/"/>
     
@@ -464,35 +464,6 @@
   </entry>
   
   <entry>
-    <title>WebGIS入门（01）WebGIS概述</title>
-    <link href="https://blog.totiancai.com/2018/03/09/webgis-ru-men-01-webgis-gai-shu/"/>
-    <id>https://blog.totiancai.com/2018/03/09/webgis-ru-men-01-webgis-gai-shu/</id>
-    <published>2018-03-09T08:53:17.000Z</published>
-    <updated>2019-06-23T13:10:16.543Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;认识WebGIS&quot;&gt;&lt;a href=&quot;#认识WebGIS&quot; class=&quot;headerlink&quot; title=&quot;认识WebGIS&quot;&gt;&lt;/a&gt;认识WebGIS&lt;/h3&gt;&lt;p&gt;WebGIS的概念&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;WebGIS（网络地理信息系统）是指工作在Web网上的GIS,是传统的GIS在网络上的延伸和发展，具有传统GIS的特点，可以实现空间数据的检索、查询、制图输出、编辑等GIS基本功能，同时也是Internet 上地理信息发布、共享和交流协作的基础。&lt;/p&gt;
-&lt;p&gt;GIS的概念：地理信息系统（英语：&lt;strong&gt;G&lt;/strong&gt;eographic &lt;strong&gt;I&lt;/strong&gt;nformation &lt;strong&gt;S&lt;/strong&gt;ystem，缩写：GIS)&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-    
-      <category term="WebGIS" scheme="https://blog.totiancai.com/categories/WebGIS/"/>
-    
-    
-      <category term="WebGIS" scheme="https://blog.totiancai.com/tags/WebGIS/"/>
-    
-      <category term="Web" scheme="https://blog.totiancai.com/tags/Web/"/>
-    
-      <category term="GIS" scheme="https://blog.totiancai.com/tags/GIS/"/>
-    
-  </entry>
-  
-  <entry>
     <title>JDK环境变量配置</title>
     <link href="https://blog.totiancai.com/2018/03/09/jdk-huan-jing-pei-zhi/"/>
     <id>https://blog.totiancai.com/2018/03/09/jdk-huan-jing-pei-zhi/</id>
@@ -520,6 +491,35 @@
       <category term="java" scheme="https://blog.totiancai.com/tags/java/"/>
     
       <category term="jdk" scheme="https://blog.totiancai.com/tags/jdk/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>WebGIS入门（01）WebGIS概述</title>
+    <link href="https://blog.totiancai.com/2018/03/09/webgis-ru-men-01-webgis-gai-shu/"/>
+    <id>https://blog.totiancai.com/2018/03/09/webgis-ru-men-01-webgis-gai-shu/</id>
+    <published>2018-03-09T08:53:17.000Z</published>
+    <updated>2019-06-23T13:10:16.543Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;认识WebGIS&quot;&gt;&lt;a href=&quot;#认识WebGIS&quot; class=&quot;headerlink&quot; title=&quot;认识WebGIS&quot;&gt;&lt;/a&gt;认识WebGIS&lt;/h3&gt;&lt;p&gt;WebGIS的概念&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;WebGIS（网络地理信息系统）是指工作在Web网上的GIS,是传统的GIS在网络上的延伸和发展，具有传统GIS的特点，可以实现空间数据的检索、查询、制图输出、编辑等GIS基本功能，同时也是Internet 上地理信息发布、共享和交流协作的基础。&lt;/p&gt;
+&lt;p&gt;GIS的概念：地理信息系统（英语：&lt;strong&gt;G&lt;/strong&gt;eographic &lt;strong&gt;I&lt;/strong&gt;nformation &lt;strong&gt;S&lt;/strong&gt;ystem，缩写：GIS)&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+      <category term="WebGIS" scheme="https://blog.totiancai.com/categories/WebGIS/"/>
+    
+    
+      <category term="WebGIS" scheme="https://blog.totiancai.com/tags/WebGIS/"/>
+    
+      <category term="Web" scheme="https://blog.totiancai.com/tags/Web/"/>
+    
+      <category term="GIS" scheme="https://blog.totiancai.com/tags/GIS/"/>
     
   </entry>
   
